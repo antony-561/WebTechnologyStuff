@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Registration Form</title>
+    </head>
+    <body align = "center">
+
+        <h2>Student Registration Form</h2>
+
+        <table border="1" cellpadding = 4 cellspacing = 0 align="center">
+            <tr>
+                <th colspan="2">Student Details</th>
+            </tr>
+            <tr>
+                <td><label for="name">Student Name</label></td>
+                <td><input type="text" id="name" name="name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="rollno">Roll Number</label></td>
+                <td><input type="text" id="rollno" name="rollno"></td>
+            </tr>
+
+            <tr>
+                <td><label for="course">Course</label></td>
+                <td>
+                    <input name = "course" type = "radio" id = "bca" value="BCA">
+                    <label for = "bca">BCA</label>
+                    <input name = "course" type = "radio" id = "imca" value="IMCA">
+                    <label for = "imca">IMCA</label>
+                    <input name = "course" type = "radio" id = "bcom" value="BCOM">
+                    <label for = "bcom">BCOM</label>
+                    <input name = "course" type = "radio" id = "bba" value="BBA">
+                    <label for = "bba">BBA</label>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="semester">Semester</label></td>
+                <td>
+                    <input list="semesters" id="semester" name="semester">
+                    <datalist id="semesters">
+                        <option value="Semester 1">
+                        <option value="Semester 2">
+                        <option value="Semester 3">
+                        <option value="Semester 4">
+                        <option value="Semester 5">
+                        <option value="Semester 6">
+                        <option value="Semester 7">
+                        <option value="Semester 8">
+                        <option value="Semester 9">
+                        <option value="Semester 10">    
+                    </datalist>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="contact">Contact Number</label></td>
+                <td><input type="tel" id="contact" name="contact"></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" id="email" name="email"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="checkbox" id="agree" name="agree">
+                    <label for="agree">
+                        I confirm that the above information is correct.
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+
+    </body>
+</html>
