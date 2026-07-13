@@ -1,0 +1,75 @@
+body {
+	background-color : #4c566a;
+	/*background-image: url('images/grad.jpg');
+	background-size : 100% 100%;*/
+	padding : 4px;
+}
+.header{
+	color: #2e3440;
+	justify-content : center;
+	text-align : center;
+}
+.divi {
+	height : 70%;
+	width : 480px;
+	text-align : center ;
+	align-content : top;
+	padding-top : 10px;
+	justify-content : center ;
+	object-fit : cover;
+	overflow : hidden ;
+	
+}
+
+.divi img{
+	height: auto;
+	width: 420px ;
+	border: solid;
+	border-color : #d8dee9;
+	border-padding : 10px;
+}
+
+#maindiv { 
+	display : flex;
+	justify-content : space-between;
+	align-content : top;
+	color : #d8dee9;
+	height : 100%;
+	
+}
+
+#maindiv img{
+	height : 240px;
+	width : 420px;
+}
+
+
+#div1:hover{
+	background-color: #a3be8c;
+}
+#div2:hover{
+	background-color: #bf616a;
+}
+#div3:hover{
+	background-color: #ebcb8b;
+}
+
+#div1:hover img{
+	border-color : #a3be8c ;
+}
+#div2:hover img{
+	border-color : #bf616a ;
+}
+#div3:hover img{
+	border-color : #ebcb8b ;
+}
+
+body:has(#div1:hover){
+	background-color: #a3be8c;
+}
+body:has(#div2:hover){
+	background-color: #bf616a;
+}
+body:has(#div3:hover){
+	background-color: #ebcb8b;
+}
