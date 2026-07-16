@@ -1,0 +1,7 @@
+function findPal(){
+
+}
+				
+function findprime(){
+	
+}

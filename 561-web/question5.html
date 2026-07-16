@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>Question 5</title>
+		<link rel = "stylesheet" href = "style2.css">
+	</head>
+	<body>
+		<div id = "formDiv">
+			<form id = "formBase" action = "submit">
+				<label for = "name"> Name </label>
+				<input type = "text" id = "name"><br><br>
+				<label for="dob"> Date of Birth </label>
+				<input type = "date" id = "dob"><br><br>
+				<label>Gender :</label>
+				
+				<input type = "radio" name = "gen" id = "male" value = "Male" >
+				<label for = "male">Male</label>
+				
+				<input type = "radio" name = "gen" id = "female" value = "Female" >
+				<label for = "female">Female</label>
+				
+				<input type = "radio" name = "gen" id = "both" value = "both" >
+				<label for = "both">Both</label>
+				
+				<input type = "radio" name = "gen" id = "none" value = "none" >
+				<label for = "none">None</label>
+				
+				<br><br>
+				<label for = "teams"> Prefered Team</label>
+				<select id = "team"> 
+					<option>Kerala Blasters</option>
+					<option>Argentina</option>
+					<option>Portugal</option>
+					<option>Brazil</option>
+					<option>Brachugaland</option>
+				</select><br><br>
+				<button type = "button" id = "bigBtn" onclick = "bigClick()"> Big </button>
+				<button type = "button" id = "lilBtn" onclick = "lilClick()"> Small </button>
+				
+			</form>
+			<script>
+				function bigClick(){
+					window.alert('Big Button Pressed');
+					let num = 15;
+					while(num !=0){
+						window.open("ikka1.html");
+						num = num-1;
+					}
+				}
+				function lilClick(){
+					window.alert('Lil Button Pressed');
+					let num = 15;
+					while(num !=0){
+						window.open("ikka2.html");
+						num = num-1;
+					}
+				}
+			</script>
+		</div>
+	</body>
+</html>

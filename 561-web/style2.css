@@ -1,0 +1,14 @@
+body {
+	display : grid;
+	background-color : #2e3440;
+
+}
+#mainDiv{
+	color : #d8dee9;
+	background-color : #3b4252;
+	text-align : center;
+	justify-content : center;
+	border : solid;
+	padding : 12px;
+	
+}
