@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Question 8</title>
+		<link rel = "stylesheet" href = "style2.css">
+		<script>
+			function bubSort()
+			{
+				let str = document.getElementById("arrIn").value;
+				let nums = str.split(" ");
+				for(let i = 0 ; i < nums.length; i++)
+				{
+					for (let j = i+1; j < nums.length; j++)
+					{
+						if(nums[i]>nums[j])
+						{
+							let temp = nums[j];
+							nums[i] = nums[j];
+							nums[j] = temp;
+						}
+					}
+				}
+				let str1 = "Sorted Array is : ";
+				for (let i = 0; i < nums.length; i++)
+				{
+					str1 = str1 + " " + nums[i];
+				}
+				document.getElementById("sortedText").innerHTML = str1;
+			}
+		</script>
+	</head>
+	<body>
+		<div id = "mainDiv">
+			<p>Enter Array</p>
+			<input id = "arrIn" type = "text"><br><br>
+			<button type = "button" onclick = "bubSort()">Sort</button>
+			<p id = "sortedText"></p>
+		</div>
+	</body>
+</html>
