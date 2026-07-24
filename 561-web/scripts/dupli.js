@@ -21,11 +21,6 @@ function findDupes()
 						nodupe[arrInd] = arr[i]
 						arrInd = arrInd+1;
 					}
-					console.log("After Check");
-					for (let j = 0; j<nodupe.length; j++)
-					{
-						console.log(nodupe[j]);
-					}
 					dup = false;
 					console.log("End Iteration");
 				}
