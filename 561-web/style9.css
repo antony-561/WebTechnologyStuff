@@ -1,0 +1,13 @@
+#content {
+	display : flex;
+	justify-content : left;
+}
+
+#datePickerDiv{
+	width : 50%;
+}
+
+#dateShowDiv {
+	width : 50%;
+	justify-content : left;
+}

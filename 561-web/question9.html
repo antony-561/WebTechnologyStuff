@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>Question 9</title>
+		<link rel = "stylesheet" href = "style2.css">
+		<link rel = "stylesheet" href = "style9.css">
+		<script>
+			function dateDisplay()
+			{
+				const dateobj = new Date();
+				document.getElementById("dateNorm").innerHTML = dateobj.toString();
+				document.getElementById("dateUTC").innerHTML = dateobj.toUTCString();
+				document.getElementById("dateISO").innerHTML = dateobj.toISOString();
+			}
+			function findTimeElap()
+			{
+				let curDate = new Date();
+				
+				let selDate = document.getElementById("datePick").valueAsDate;
+				
+				let diffDate = curDate - selDate;
+				let inDays = Math.floor(diffDate/(1000*60*60*24));
+				let inHours = Math.floor(diffDate/(1000*60*60) - 5) ;
+				
+				
+				if(inDays<0)
+				{
+					let strDay = "Days Left : " + Math.abs(inDays);
+					let strHrs = "Time Left : " + Math.abs(inHours) + " Hours";
+					document.getElementById("daysElap").innerHTML = strDay;
+					document.getElementById("timeElap").innerHTML = strHrs;
+				}
+				else
+				{
+					let strDay = "Days Passed : " + inDays;
+					let strHrs = "Time Passed : " + Math.abs(inHours) + " Hours";
+					document.getElementById("daysElap").innerHTML = strDay;
+					document.getElementById("timeElap").innerHTML = strHrs;
+				}
+				console.log(selDate);
+				console.log(curDate);
+			}
+		</script>
+	</head>
+	<body onload = "dateDisplay()">
+		<div id="mainDiv">
+			<div id = "header">
+				<h1>Date and stuff</h1>
+			</div>
+			<div id = "content">
+			
+				<div id = "dateShowDiv">
+					<label for = "dateNorm"> Date and Time Today in Normal Format : </label>
+					<p id = "dateNorm"></p>
+					<label for = "dateUTC"> Date and Time Today in UTC Format : </label>
+					<p id = "dateUTC"></p>
+					<label for = "dateISO"> Date and Time Today in ISO Format : </label>
+					<p id = "dateISO"></p>
+				</div>
+				
+				<div id = "datePickerDiv">
+					<label for = "datePick">Select Date :</label>
+					<input type = "date" id = "datePick">
+					<p id = "daysElap"></p>
+					<p id = "timeElap"></p>
+					
+					<button onclick = "findTimeElap()">Find Time Elapsed</button>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
