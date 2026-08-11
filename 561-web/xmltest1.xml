@@ -1,0 +1,50 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE menu [
+	<!ELEMENT menu (category+)>
+	<!ATTLIST category
+		name CDATA #REQUIRED
+	>
+	
+	<!ELEMENT category (item+)>
+	<!ELEMENT item (id,name,price,desc)>
+	<!ATTLIST item 
+		id ID #REQUIRED
+		type CDATA #IMPLIED
+	>
+	
+	<!ELEMENT id (#PCDATA)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT price (#PCDATA)>
+	<!ELEMENT desc (#PCDATA)>
+	
+]>
+
+
+<menu>
+	<category>
+		<item id = "item1">
+			<id>101</id>
+			<name>Dosa</name>
+			<price>20</price>
+			<desc>Breakfast</desc>
+		</item>
+		<item id = "item2">
+			<id>102</id>
+			<name>Idli</name>
+			<price>20</price>
+			<desc>Breakfast</desc>
+		</item>
+		<item id = "item3">
+			<id>103</id>
+			<name>Vada</name>
+			<price>10</price>
+			<desc>Snacks</desc>
+		</item>
+		<item id = "item4">
+			<id>104</id>
+			<name>Rice</name>
+			<price>30</price>
+			<desc>Lunch</desc>
+		</item>
+	</category>
+</menu>

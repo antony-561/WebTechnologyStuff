@@ -1,0 +1,19 @@
+#dispWin {
+	border-color : White;
+	border : solid;
+}
+
+#btnWin {
+	border-color : White;
+	border : solid;
+	display : flex;
+}
+
+#numBtn {
+	width : 20%;
+	display : block;
+}
+
+#opBtn {
+	display : grid;
+}
