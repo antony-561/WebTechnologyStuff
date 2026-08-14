@@ -3,6 +3,22 @@
 		<title>Question 10</title>
 		<link rel = "stylesheet" href = "style2.css">
 		<link rel = "stylesheet" href = "style10.css">
+		<script>
+			function getStr()
+			{
+				let str;
+				
+			}
+			function numPrs()
+			{
+				document.getElementById("resBox").innerHTML = "HELLO";
+			}
+			
+			function opPrs()
+			{
+				document.getElementById("resBox").innerHTML = "BYEE";
+			}
+		</script>
 	</head>
 	
 	<body>
@@ -10,27 +26,28 @@
 			<h1>Calculator</h1>
 			<div id = "calcDiv">
 				<div id = "dispWin">
-					<p>Results here</p>
+					<p id = resBox>Results here</p>
 				</div>
 				<div id = "btnWin">
 					<div id = "numBtn">
-						<button id = "num1">1</button>
-						<button id = "num2">2</button>
-						<button id = "num3">3</button>
-						<button id = "num4">4</button>
-						<button id = "num5">5</button>
-						<button id = "num6">6</button>
-						<button id = "num7">7</button>
-						<button id = "num8">8</button>
-						<button id = "num9">9</button>
-						<button id = "num0">0</button>
+						<button id = "num1" class = "numBtn" onclick = numPrs() >1</button>
+						<button id = "num2" class = "numBtn"  onclick = numPrs() >2</button>
+						<button id = "num3" class = "numBtn"  onclick = numPrs() >3</button>
+						<button id = "num4" class = "numBtn"  onclick = numPrs() >4</button>
+						<button id = "num5" class = "numBtn"  onclick = numPrs() >5</button>
+						<button id = "num6" class = "numBtn"  onclick = numPrs() >6</button>
+						<button id = "num7" class = "numBtn"  onclick = numPrs() >7</button>
+						<button id = "num8" class = "numBtn"  onclick = numPrs() >8</button>
+						<button id = "num9" class = "numBtn"  onclick = numPrs() >9</button>
+						<button id = "num0" class = "numBtn"  onclick = numPrs() >0</button>
 					</div>
 					<div id = "opBtn">
-						<button class = "op">+</button>
-						<button class = "op">-</button>
-						<button class = "op">*</button>
-						<button class = "op">/</button>
-						<button class = "op">%</button>
+						<button class = "op" id = "add" onclick = opPrs()>+</button>
+						<button class = "op" id = "sub" onclick = opPrs()>-</button>
+						<button class = "op" id = "mul" onclick = opPrs()>*</button>
+						<button class = "op" id = "div" onclick = opPrs()>/</button>
+						<button class = "op" id = "mod" onclick = opPrs()>%</button>
+						<button class = "op" id = "res" onclick = opPrs()>=</button>
 					</div>
 				</div>
 			</div>

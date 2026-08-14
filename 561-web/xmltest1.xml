@@ -1,22 +1,23 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE menu [
 	<!ELEMENT menu (category+)>
+
+
+	<!ELEMENT category (item+)>
+	<!ELEMENT item (id,name,price,desc)>
 	<!ATTLIST category
 		name CDATA #REQUIRED
 	>
-	
-	<!ELEMENT category (item+)>
-	<!ELEMENT item (id,name,price,desc)>
-	<!ATTLIST item 
+	<!ATTLIST item
 		id ID #REQUIRED
 		type CDATA #IMPLIED
 	>
-	
+
 	<!ELEMENT id (#PCDATA)>
 	<!ELEMENT name (#PCDATA)>
 	<!ELEMENT price (#PCDATA)>
 	<!ELEMENT desc (#PCDATA)>
-	
+
 ]>
 
 
