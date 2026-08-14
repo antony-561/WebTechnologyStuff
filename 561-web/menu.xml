@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<restaurantMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="menu.xsd">
-
-	<!-- Categories and food items go here -->
+<restaurantMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="menu.xsd">
+	
+	<category name="Appetizers">
+		<item id="item-APP-01" type="veg" spicyLevel="mild">
+			<name>Paneer Tikka</name>
+			<price currency="INR">249.00</price>
+			<description>Cottage cheese marinated in spiced aromatic herbs, grilled in tandoor.
+			</description>
+		</item>
+		<item id="item-APP-02" type="non-veg" spicyLevel="hot">
+			<name>Chicken Wings</name>
+			<price currency="INR">299.50</price>
+			<description>Crispy spiced wings glazed in tangy peri-peri pepper sauce.</description>
+		</item>
+	</category>
+	
+	<category name="Main Course">
+		<item id="item-MC-01" type="veg" spicyLevel="medium">
+			<name>Butter Paneer Masala</name>
+			<price currency="INR">340.00</price>
+			<description>
+				Fresh cottage cheese simmered in rich creamy tomato and butter gravy.
+			</description>
+		</item>
+		<item id="item-MC-02" type="non-veg" spicyLevel="medium">
+			<name>Mutton Rogan Josh</name>
+			<price currency="INR">450.00</price>
+			<description>
+				Tender lamb slow-cooked with Kashmiri red chilies and fragrant spices.
+			</description>
+		</item>
+	</category>
+	
+	<category name="Desserts">
+		<item id="item-DES-01" type="veg" spicyLevel="none">
+			<name>Gulab Jamun</name>
+			<price currency="INR">120.00</price>
+			<description>
+				Deep-fried milk dumplings soaked in warm cardamom sugar syrup.
+			</description>
+		</item>
+		<item id="item-DES-02" type="vegan" spicyLevel="none">
+			<name>Mango Sorbet</name>
+			<price currency="INR">150.00</price>
+			<description>
+				Refreshing dairy-free chilled dessert made with pure Alphonso mango pulp.
+			</description>
+		</item>
+	</category>
 </restaurantMenu>

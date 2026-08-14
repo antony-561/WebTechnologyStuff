@@ -1,4 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+
+<xs:simpleType name = "dietaryType">
+	<xs:restriction base = "xs:string">
+		<xs:enumeration value = "veg"/>
+		<xs:enumeration value = "non-veg"/>
+		<xs:enumeration value = "vegan"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="spiceType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="none"/>
+		<xs:enumeration value="mild"/>
+		<xs:enumeration value="medium"/>
+		<xs:enumeration value="hot"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="positivePrice">
+	<xs:restriction base="xs:decimal">
+		<xs:minExclusive value="0.00"/>
+		<xs:fractionDigits value="2"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="priceType">
+	<xs:simpleContent>
+		<xs:extension base="positivePrice">
+			<xs:attribute name="currency" type="xs:string" use="optional" default="INR"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="foodItemType">
+	<xs:sequence>
+		<xs:element name="name" type="xs:string"/>
+		<xs:element name="price" type="priceType"/>
+		<xs:element name="description" type="xs:string"/>
+	</xs:sequence>
+	<xs:attribute name="id" type="xs:ID" use="required"/>
+	<xs:attribute name="type" type="dietaryType" use="required"/>
+	<xs:attribute name="spicyLevel" type="spiceType" use="optional" default="mild"/>
+</xs:complexType>
+
+<xs:complexType name="categoryType">
+	<xs:sequence>
+		<xs:element name="item" type="foodItemType" minOccurs="1" maxOccurs="unbounded"/>
+	</xs:sequence>
+	<xs:attribute name="name" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:element name="restaurantMenu">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="category" type="categoryType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
 </xs:schema>
